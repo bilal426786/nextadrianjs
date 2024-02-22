@@ -10,7 +10,7 @@ import React from "react";
 const NavContent = () => {
   const pathname = usePathname();
   return (
-    <section className="flex flex-col gap-1">
+    <section className="flex flex-col gap-4">
       {sidebarLinks.map((item) => {
         const isActive =
           (pathname.includes(item.route) && pathname.length > 1) ||
@@ -19,7 +19,7 @@ const NavContent = () => {
           <Link
             key={item.route}
             href={item.route}
-            className={`${isActive ? "primary-gradient rounded-lg text-light-900" : "text-dark300_light900"} flex items-center justify-center gap-4 bg-transparent p-4 lg:justify-start`}
+            className={`${isActive ? "primary-gradient rounded-lg text-light-900" : "text-dark300_light900"} flex items-center justify-center gap-6 bg-transparent p-4 lg:justify-start`}
           >
             <Image
               src={item.imgURL}
@@ -42,7 +42,7 @@ const NavContent = () => {
 
 const LeftSidebar = () => {
   return (
-    <section className="background-light900_dark200 fixed hidden h-screen w-16 overflow-y-auto px-1 pb-3 pt-28 sm:block lg:w-72 lg:px-3">
+    <section className="background-light900_dark200 light-border custom-scrollbar sticky hidden  h-screen w-16 overflow-y-auto border-r px-1 pb-3 pt-28 shadow-light-300 dark:shadow-none sm:block lg:w-72 lg:px-3">
       <NavContent />
       <SignedOut>
         <div className="flex flex-col gap-3">
