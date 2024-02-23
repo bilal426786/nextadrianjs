@@ -1,5 +1,15 @@
 import { BADGE_CRITERIA } from "@/constants";
 
+export interface PopularTagsType {
+  _id: number;
+  tag: string;
+  totalQuestions: number;
+}
+export interface HotQuestionsType {
+  _id: number;
+  title: string;
+}
+
 export interface SidebarLink {
   imgURL: string;
   route: string;
