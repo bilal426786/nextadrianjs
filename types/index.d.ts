@@ -1,5 +1,24 @@
 import { BADGE_CRITERIA } from "@/constants";
 
+export interface LocalSearchBarProps {
+  route: string;
+  iconPosition?: string;
+  imgURL: string;
+  placeholder?: string;
+}
+export interface MobileFilterProps {
+  filters: { name: string; value: string }[];
+  parentClasses?: string;
+  childClasses?: string;
+}
+
+export interface RenderTagProps {
+  _id: number;
+  name: string;
+  totalQuestions?: number;
+  showCount?: boolean;
+}
+
 export interface PopularTagsType {
   _id: number;
   tag: string;
